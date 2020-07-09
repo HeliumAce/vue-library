@@ -17,11 +17,6 @@
 import {eventBus} from "../main";
 
 export default {
-  data() {
-    return {
-      id: this.id
-    }
-  },
   props: {
      book: {
        type: Object,

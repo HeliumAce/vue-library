@@ -5,10 +5,8 @@
 </template>
 
 <script>
-import {
-  eventBus
-} from "../main";
-import Book from './Book.vue'
+import {eventBus} from "../main";
+import Book from './Book.vue';
 
 let nextBookId = 1
 
@@ -42,11 +40,11 @@ export default {
           pages: pages
         })
       }),
-      eventBus.$on('removing-book', (id) => {
-        this.books = this.books.filter(book => {
-          return book.id !== id
-        })
+    eventBus.$on('removing-book', (id) => {
+      this.books = this.books.filter(book => {
+        return book.id !== id
       })
+    })
   }
 }
 </script>
